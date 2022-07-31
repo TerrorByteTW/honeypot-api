@@ -30,7 +30,6 @@ public abstract class WorldGuardUtil {
 	 * 
 	 * @param player The player initiating the action
 	 * @return True if the action is allowed, false if the action isn't allowed OR if WorldGuard support isn't enabled.
-	 * @see #isEnabled() {@link #isEnabled()}
 	 */
 	public abstract boolean isAllowed(Player player);
 }
