@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>Honeypot-API</artifactId>
+    <artifactId>honeypot-api</artifactId>
     <name>honeypot-api</name>
     <description>Plugin for Spigot MC servers to deter griefers and take action autonomously</description>
     <url>https://github.com/TerrrorByte/Honeypot</url>
