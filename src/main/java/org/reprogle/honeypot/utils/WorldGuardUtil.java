@@ -5,8 +5,9 @@ import org.bukkit.entity.Player;
 import com.sk89q.worldguard.protection.flags.StateFlag;
 
 /**
- * A class for accessing the Honeypot WorldGuard. This will allow retrieval of the Honeypot WorldGuard flag
- * as well as checking if actions are allowed, without having to integrate WorldGuard into your own plugin
+ * A small utility class for helping connect with WorldGuard. This allows direct interaction with the
+ * Honeypot WorldGuard flag, and also allows developers to check if actions are allowed within a region, all
+ * without directly integrating WorldGuard in your project
  */
 public abstract class WorldGuardUtil {
 
@@ -23,12 +24,6 @@ public abstract class WorldGuardUtil {
 	 * @return {@link StateFlag}
 	 */
 	public abstract StateFlag getWorldGuardFlag();
-
-	/**
-	 * Checks if WorldGuard support is enabled
-	 * @return True if enabled, false if not
-	 */
-	public abstract boolean isEnabled();
 
 	/**
 	 * Check if the allow-honeypots flag is on
