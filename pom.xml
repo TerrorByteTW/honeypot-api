@@ -11,6 +11,7 @@
 
     <artifactId>honeypot-api</artifactId>
     <name>honeypot-api</name>
+    <version>2.2.5</version>
     <description>Plugin for Spigot MC servers to deter griefers and take action autonomously</description>
     <url>https://github.com/TerrrorByte/Honeypot</url>
 
