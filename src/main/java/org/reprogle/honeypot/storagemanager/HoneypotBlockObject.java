@@ -3,6 +3,8 @@ package org.reprogle.honeypot.storagemanager;
 import org.bukkit.Location;
 import org.bukkit.block.Block;
 
+import com.google.common.base.Objects;
+
 /**
  * A class representing a Honeypot Block object. 
  * Includes methods for getting all values of a Honeypot block object, which can be returned via the {@link HoneypotBlockManager} class
@@ -10,7 +12,6 @@ import org.bukkit.block.Block;
  * @see HoneypotPlayerManager
  * @see HoneypotBlockManager
  */
-@SuppressWarnings("unused")
 public abstract class HoneypotBlockObject {
 
     private final String coordinates;
@@ -78,5 +79,21 @@ public abstract class HoneypotBlockObject {
      * @return Honeypot Block object
      */
     public abstract Block getBlock();
+
+    @Override
+    public boolean equals(Object o) {
+        if (!(o instanceof HoneypotBlockObject)) return false;
+        if (o == this) return true;
+
+        HoneypotBlockObject honeypot = (HoneypotBlockObject) o;
+
+        // Don't really care about the action since action doesn't determine a Honeypot
+        return honeypot.coordinates.equalsIgnoreCase(this.coordinates) && honeypot.world.equals(this.world);
+    }
+
+    @Override
+    public int hashCode(){
+        return Objects.hashCode(coordinates, world, action);
+    }
 
 }
