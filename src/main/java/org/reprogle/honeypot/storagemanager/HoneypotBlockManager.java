@@ -49,6 +49,16 @@ public class HoneypotBlockManager {
     }
 
     /**
+     * Convert a block to its {@link HoneypotBlockObject}, if it exists in the database
+     * @param block The block to convert to a HoneypotBlockObject
+     * @return HoneypotBlockObject if it exists, null if it doesn't
+     * @see HoneypotBlockObject
+     */
+    public HoneypotBlockObject getHoneypotBlock(Block block) {
+        return getHoneypotBlock(block);
+    }
+
+    /**
      * Return the action for the honeypot {@link Block} (Meant for ban, kick, etc.)
      * If a string is returned that is not a default action, it's custom.
      * 
