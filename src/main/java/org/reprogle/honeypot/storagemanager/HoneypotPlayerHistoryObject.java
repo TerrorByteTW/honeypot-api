@@ -2,6 +2,11 @@ package org.reprogle.honeypot.storagemanager;
 
 import org.bukkit.entity.Player;
 
+/**
+ * A class representing a player history entry. 
+ * Includes methods for getting all values of a Honeypot history entry, which can be returned via the {@link HoneypotPlayerHistoryManager} class
+ * @see HoneypotPlayerHistoryManager
+ */
 @SuppressWarnings({"unused", "java:S1068", "java:S116"})
 public abstract class HoneypotPlayerHistoryObject {
     private String dateTime;

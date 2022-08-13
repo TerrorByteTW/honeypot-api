@@ -4,6 +4,11 @@ import java.util.List;
 
 import org.bukkit.entity.Player;
 
+/**
+ * A class for managing Honeypot history entries.
+ * Adds functions for creating, removing, querying, and purging the history database. 
+ * @see HoneypotPlayerHistoryObject
+ */
 public class HoneypotPlayerHistoryManager {
 
     /**
