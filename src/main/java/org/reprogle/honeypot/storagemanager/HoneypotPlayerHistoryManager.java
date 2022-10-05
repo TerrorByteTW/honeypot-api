@@ -6,13 +6,33 @@ import org.bukkit.entity.Player;
 
 /**
  * A class for managing Honeypot history entries.
- * Adds functions for creating, removing, querying, and purging the history database. 
+ * Adds functions for creating, removing, querying, and purging the history
+ * database.
+ * 
  * @see HoneypotPlayerHistoryObject
  */
 public class HoneypotPlayerHistoryManager {
 
+    private static HoneypotPlayerHistoryManager instance = null;
+
+    private HoneypotPlayerHistoryManager() {
+    }
+
+    /**
+     * Returns the singleton instance of this class
+     * 
+     * @return The {@link HoneypotPlayerHistoryManager} instance
+     */
+    public static HoneypotPlayerHistoryManager getInstance() {
+        if (instance == null)
+            instance = new HoneypotPlayerHistoryManager();
+
+        return instance;
+    }
+
     /**
      * Add an entry to the player history table
+     * 
      * @param p The player to add
      * @param b The honeypot block they triggered
      */
@@ -22,6 +42,7 @@ public class HoneypotPlayerHistoryManager {
 
     /**
      * Get the history for a player
+     * 
      * @param p The player to grab history for
      * @return A list of all HoneypotPlayerHistory objects
      */
@@ -30,11 +51,13 @@ public class HoneypotPlayerHistoryManager {
     }
 
     /**
-     * Delete all history for a particular player. An optional n parameter for specifying the number of most recent rows to delete
+     * Delete all history for a particular player. An optional n parameter for
+     * specifying the number of most recent rows to delete
+     * 
      * @param p The player to delete
      * @param n Optional, the number of most recent rows
      */
-    public void deletePlayerHistory (Player p, int... n) {
+    public void deletePlayerHistory(Player p, int... n) {
         // Intentionally left blank
     }
 

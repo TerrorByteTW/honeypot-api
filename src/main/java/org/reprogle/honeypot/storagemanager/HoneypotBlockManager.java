@@ -5,36 +5,59 @@ import org.bukkit.block.Block;
 import java.util.List;
 
 /**
- * A class for managing Honeypot blocks. 
- * Adds functions for creating, removing, verifying, getting the action, listing all blocks, and even clearing out the DB. 
+ * A class for managing Honeypot blocks.
+ * Adds functions for creating, removing, verifying, getting the action, listing
+ * all blocks, and even clearing out the DB.
+ * 
  * @see HoneypotPlayerObject
  * @see HoneypotPlayerManager
  * @see HoneypotBlockObject
  */
 public class HoneypotBlockManager {
 
+    private static HoneypotBlockManager instance = null;
+
+    private HoneypotBlockManager() {
+    }
+
     /**
-     * Create a honeypot {@link Block} by creating a HoneypotBlock object and storing it to DB.
+     * Returns the singleton instance of this class
      * 
-     * @param block The Honeypot Block we're creating
+     * @return The {@link HoneypotBlockManager} instance
+     */
+    public static HoneypotBlockManager getInstance() {
+        if (instance == null)
+            instance = new HoneypotBlockManager();
+
+        return instance;
+    }
+
+    /**
+     * Create a honeypot {@link Block} by creating a HoneypotBlock object and
+     * storing it to DB.
+     * 
+     * @param block  The Honeypot Block we're creating
      * @param action The action of the Honeypot
      */
     @SuppressWarnings("java:S1604")
     public void createBlock(Block block, String action) {
         /*
-         * Function intentionally left blank as it's just a placeholder to develop against Honeypot
+         * Function intentionally left blank as it's just a placeholder to develop
+         * against Honeypot
          */
     }
 
     /**
-     * Compare the coordinates of the received {@link Block} to the DB. If it exists, delete it and break to avoid a
+     * Compare the coordinates of the received {@link Block} to the DB. If it
+     * exists, delete it and break to avoid a
      * Java error
      * 
      * @param block The Honeypot {@link Block} we're deleting
      */
     public void deleteBlock(Block block) {
         /*
-         * Function intentionally left blank as it's just a placeholder to develop against Honeypot
+         * Function intentionally left blank as it's just a placeholder to develop
+         * against Honeypot
          */
     }
 
@@ -49,7 +72,9 @@ public class HoneypotBlockManager {
     }
 
     /**
-     * Convert a block to its {@link HoneypotBlockObject}, if it exists in the database
+     * Convert a block to its {@link HoneypotBlockObject}, if it exists in the
+     * database
+     * 
      * @param block The block to convert to a HoneypotBlockObject
      * @return HoneypotBlockObject if it exists, null if it doesn't
      * @see HoneypotBlockObject
@@ -70,11 +95,13 @@ public class HoneypotBlockManager {
     }
 
     /**
-     * Delete all Honeypots in the entire DB. Do not use unless you know what you're doing
+     * Delete all Honeypots in the entire DB. Do not use unless you know what you're
+     * doing
      */
     public void deleteAllHoneypotBlocks() {
         /*
-         * Function intentionally left blank as it's just a placeholder to develop against Honeypot
+         * Function intentionally left blank as it's just a placeholder to develop
+         * against Honeypot
          */
     }
 
