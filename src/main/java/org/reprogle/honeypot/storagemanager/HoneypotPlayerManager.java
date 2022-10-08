@@ -15,14 +15,7 @@ public class HoneypotPlayerManager {
 
     private static HoneypotPlayerManager instance = null;
 
-    /**
-     * Creates an instance of the HoneypotPlayerManager
-     * @deprecated
-     * This function is now deprecated as this class is intended to be used as a singleton. Please use {@link #getInstance()} instead
-     * The immediate next version of Honeypot will make this function private.
-     */
-    @Deprecated
-    public HoneypotPlayerManager() {
+    private HoneypotPlayerManager() {
         // There really is no reason for this to be public, but we're deprecating it to support legacy plugins
     }
 
