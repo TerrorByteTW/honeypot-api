@@ -18,7 +18,6 @@ public class HoneypotBlockManager {
     private static HoneypotBlockManager instance = null;
 
     private HoneypotBlockManager() {
-      // There is really no need for this to be public, but we're deprecating it so that it still supports legacy plugins
     }
 
     /**
@@ -26,8 +25,6 @@ public class HoneypotBlockManager {
      * 
      * @return The {@link HoneypotBlockManager} instance
      */
-    // Warnings are suppressed due to the deprecation of the public HoneypotBlockManager constructor
-    @SuppressWarnings("java:S1874")
     public static HoneypotBlockManager getInstance() {
         if (instance == null)
             instance = new HoneypotBlockManager();
