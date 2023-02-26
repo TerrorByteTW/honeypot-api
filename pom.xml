@@ -1,18 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
 
     <parent>
         <groupId>org.reprogle</groupId>
         <artifactId>honeypot-parent</artifactId>
         <!-- This is the main project version, which must be updated every time -->
-        <version>2.5.3</version>
+        <version>2.5.4</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>honeypot-api</artifactId>
     <name>honeypot-api</name>
-    <!-- The API version is now separate, meaning people don't have to update plugin dependencies if the API doesn't update -->
+    <!-- The API version is now separate, meaning people don't have to update plugin dependencies if
+    the API doesn't update -->
     <version>2.5.2</version>
     <description>Plugin for Spigot MC servers to deter griefers and take action autonomously</description>
     <url>https://github.com/TerrorByteTW/Honeypot</url>
