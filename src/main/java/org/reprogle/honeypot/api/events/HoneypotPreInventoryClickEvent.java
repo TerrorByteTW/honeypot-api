@@ -24,11 +24,11 @@ public class HoneypotPreInventoryClickEvent extends Event implements Cancellable
 	private final Inventory inv;
 
 	/**
-	 * Called before a Honeypot is created is taken on a player who broke with Honeypot inventory. If cancelled, the
-	 * creation of the Honeypot is cancelled
+	 * Called before an action is ran on a player who modified a Honeypot inventory.
+	 * If cancelled, the modification is allowed and action isn't taken
 	 * 
 	 * @param player The Player breaking with the Honeypot
-	 * @param block The Honeypot block
+	 * @param inv    The inventory of the block
 	 */
 	public HoneypotPreInventoryClickEvent(Player player, Inventory inv) {
 		this.player = player;
@@ -39,7 +39,7 @@ public class HoneypotPreInventoryClickEvent extends Event implements Cancellable
 	 * Boilerplate function for Bukkit
 	 * 
 	 * @return HandlerList
-	 */	
+	 */
 	@Override
 	public HandlerList getHandlers() {
 		return HANDLERS;
@@ -57,6 +57,7 @@ public class HoneypotPreInventoryClickEvent extends Event implements Cancellable
 
 	/**
 	 * Get the player that broke the block
+	 * 
 	 * @return {@link Player}
 	 */
 	public Player getPlayer() {
@@ -65,6 +66,7 @@ public class HoneypotPreInventoryClickEvent extends Event implements Cancellable
 
 	/**
 	 * Get the block that was involved in the event
+	 * 
 	 * @return {@link Block}
 	 */
 	public Inventory getInventory() {
@@ -73,6 +75,7 @@ public class HoneypotPreInventoryClickEvent extends Event implements Cancellable
 
 	/**
 	 * Check if the event is cancelled
+	 * 
 	 * @return True if cancelled, false if not
 	 */
 	public boolean isCancelled() {
@@ -82,7 +85,7 @@ public class HoneypotPreInventoryClickEvent extends Event implements Cancellable
 	/**
 	 * Set the event as cancelled or not
 	 * 
-	 * @param cancel Boolean value notating if the event is cancelled or not 
+	 * @param cancel Boolean value notating if the event is cancelled or not
 	 */
 	@Override
 	public void setCancelled(boolean cancel) {
