@@ -14,9 +14,6 @@
 
     <artifactId>honeypot-api</artifactId>
     <name>honeypot-api</name>
-    <!-- The API version is now separate, meaning people don't have to update plugin dependencies if
-    the API doesn't update -->
-    <version>2.6.0</version>
     <description>Plugin for Spigot MC servers to deter griefers and take action autonomously</description>
     <url>https://github.com/TerrorByteTW/Honeypot</url>
 
